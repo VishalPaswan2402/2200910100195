@@ -44,14 +44,13 @@ export default function HomePage(props) {
                 <h1>URL Shortener</h1>
                 <div>
                     <input placeholder='Enter URL' onChange={(e) => setUrl(e.target.value)}></input>
+                    <br></br><br></br>
                     <button type='submit' onClick={submitForm}>Submit</button>
                 </div>
                 <div>
-                    {/* {
-                        allUrl.map(url=>(){
-
-                        })
-                    } */}
+                    {allUrl && allUrl.map((urls) => (
+                        <p key={urls._id}>{urls}</p>
+                    ))}
                 </div>
             </div>
         </>
